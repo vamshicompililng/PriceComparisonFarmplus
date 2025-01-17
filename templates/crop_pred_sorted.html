@@ -153,6 +153,11 @@
         margin-bottom: 50%;
       }
       }
+      @media screen and (max-width:680px){
+        .crop-section {
+        grid-template-columns: repeat(2, 2fr);
+      }
+      }
 
       #google_translate_element_container {
         position: fixed;
@@ -162,6 +167,7 @@
         transition: box-shadow 0.3s ease; /* Add transition for a smoother effect */
       }
 
+
       /* Style the Google Translate Element */
       #google_translate_element {
         border: 1px solid rgba(255, 174, 0); /* Cyan border color */
@@ -170,6 +176,7 @@
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(255, 174, 0); /* Initial box-shadow */
       }
+
 
       /* Add box-shadow when hovering over the container */
       #google_translate_element_container:hover {
