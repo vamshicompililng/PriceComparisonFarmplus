@@ -215,6 +215,7 @@
           ><i class="fa-solid fa-location-dot"></i> STATE:</label
         >
         <select id="State{{ i }}" name="State{{ i }}">
+          <option value="" disabled selected>Select a State:</option>
           <option value="Andaman and Nicobar">Andaman and Nicobar</option>
           <option value="Andhra Pradesh">Andhra Pradesh</option>
           <option value="Bihar">Bihar</option>
@@ -248,6 +249,8 @@
           ><i class="fas fa-map-marked-alt"></i> DISTRICT :</label
         >
         <select id="District{{ i }}" name="District{{ i }}">
+          <option value="" disabled selected>Select a Market:</option>
+
           <option value="Mangalore(Dakshin Kannad)">
             Mangalore(Dakshin Kannad)
           </option>
@@ -2030,14 +2033,12 @@
           <option value="Zunheboto">Zunheboto</option>
           <option value="kalanwali">kalanwali</option>
         </select>
-        <label for="Commodity{{ i }}"
-          ><i class="fas fa-leaf"></i> COMMODITY :</label
-        >
+        <label for="Commodity{{ i }}"><i class="fas fa-leaf"></i> COMMODITY :</label >
         <select id="Commodity{{ i }}" name="Commodity{{ i }}">
-          <option value="French Beans (Frasbean)">
-            French Beans (Frasbean)
-          </option>
-          <option value="Amaranthus">Amaranthus</option>
+          <option value="" disabled selected>Select a Commodity:</option>
+
+          <option value="French Beans (Frasbean)">French Beans (Frasbean) </option>
+   <option value="Amaranthus">Amaranthus</option>
           <option value="Apple">Apple</option>
           <option value="Ashgourd">Ashgourd</option>
           <option value="Banana">Banana</option>
@@ -2099,6 +2100,7 @@
           ><i class="fas fa-seedling"></i> VARIETY :</label
         >
         <select id="Variety{{ i }}" name="Variety{{ i }}">
+          <option value="" disabled selected>Select a Variety:</option>
           <option value="CR 1009 (Coarse) Boiled">
             CR 1009 (Coarse) Boiled
           </option>
@@ -2575,10 +2577,11 @@
           ><i class="fas fa-balance-scale"></i> QUALITY:</label
         >
         <select id="Grade{{ i }}" name="Grade{{ i }}">
+          <option value="" disabled selected>Select a Quality:</option>
           <option value="FAQ">FAQ :</option>
           <option value="Large">Large</option>
           <option value="Medium">Medium</option>
-          <option disabled="" selected="" value="">Select a Quality</option>
+          <!-- <option disabled="" selected="" value="">Select a Quality</option> -->
         </select>
       </fieldset>
       {% endfor %}
