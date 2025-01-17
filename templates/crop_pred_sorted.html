@@ -2609,45 +2609,74 @@
       </div>
     </div>
     </center>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-            const ctx = document.getElementById('myChart').getContext('2d');
-            const cropNames = {{ crop_names |   safe }};
-                const cropPrices = {{ crop_prices |   safe }};
-
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: cropNames,
-                    datasets: [{
-                        label: 'Price (Rupees Per Quintal)',
-                        data: cropPrices,
-                        backgroundColor: [
-          'rgb(255, 0, 0)',  // normal red
-          'rgb(255, 204, 0)',  // dark yellow (Mustard Yellow)
-          'rgb(34, 139, 34)',   // dark green
-          'rgb(255, 159, 64)',  // orange
-          'rgb(54, 162, 235)' ,
-      ],
-      borderColor: [
-          'rgba(255, 0, 0, 0.1)',  // light red
-          'rgba(255, 204, 0, 0.1)',  // light dark yellow
-          'rgba(34, 139, 34, 0.1)',   // light green
-          'rgba(255, 159, 64, 0.1)',  // light orange
-          'rgba(54, 162, 235, 0.1)'   // light blue
-      ],
-      borderWidth: 2
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-    </script>
+      const ctx = document.getElementById('myChart').getContext('2d');
+      const cropNames = {{ crop_names | safe }};
+      const cropPrices = {{ crop_prices | safe }};
+  
+      new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: cropNames,
+              datasets: [{
+                  label: 'Price (Rupees Per Quintal)',
+                  data: cropPrices,
+                  backgroundColor: [
+                      'rgb(255, 0, 0)',  // normal red
+                      'rgb(255, 204, 0)',  // dark yellow (Mustard Yellow)
+                      'rgb(34, 139, 34)',   // dark green
+                      'rgb(255, 159, 64)',  // orange
+                      'rgb(54, 162, 235)' ,
+                  ],
+                  borderColor: [
+                      'rgba(255, 0, 0, 0.1)',  // light red
+                      'rgba(255, 204, 0, 0.1)',  // light dark yellow
+                      'rgba(34, 139, 34, 0.1)',   // light green
+                      'rgba(255, 159, 64, 0.1)',  // light orange
+                      'rgba(54, 162, 235, 0.1)'   // light blue
+                  ],
+                  borderWidth: 2
+              }]
+          },
+          options: {
+              plugins: {
+                  legend: {
+                      labels: {
+                          color: 'white', // Set legend label text color to white
+                          font: {
+                              weight: 'bold' // Make legend label text bold
+                          }
+                      }
+                  }
+              },
+              scales: {
+                  x: {
+                      ticks: {
+                          color: 'white', // Set x-axis text color to white
+                          font: {
+                              weight: 'bold' // Make x-axis text bold
+                          }
+                      },
+                      grid: {
+                          color: 'rgba(255, 255, 255, 0.2)' // Set x-axis grid color to white (semi-transparent)
+                      }
+                  },
+                  y: {
+                      beginAtZero: true,
+                      ticks: {
+                          color: 'white', // Set y-axis text color to white
+                          font: {
+                              weight: 'bold' // Make y-axis text bold
+                          }
+                      },
+                      grid: {
+                          color: 'rgba(255, 255, 255, 0.2)' // Set y-axis grid color to white (semi-transparent)
+                      }
+                  }
+              }
+          }
+      });
+  </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--script>
         $(document).ready(function() {
