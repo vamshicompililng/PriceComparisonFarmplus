@@ -133,24 +133,22 @@
         color: white;
       }
       #gdiv {
-        background-color: #00000095;
+        background-color: #ffffff95;
         /* opacity: 0.95; */
-        width: 100%;
+        width: 80%;
         height: 100%;
+        color: black;
+        /* display: flex; */
+        /* align-items: center; */
         justify-content: center;
         /* padding-bottom: 10%; */
-        color: white;
-        padding-bottom: 10%;
       }
-      @media screen and (max-width:450px){
-        #gdiv{
-          padding-bottom: 50%;
-          height: 450px;
+      #ggdiv{
+        margin-bottom: 20%;
       }
-      }
-      @media screen and (max-width:680px){
-        .crop-section {
-        grid-template-columns: repeat(2, 2fr);
+      @media screen and (max-width:400px){
+        #ggdiv{
+        margin-bottom: 50%;
       }
       }
 
@@ -162,7 +160,6 @@
         transition: box-shadow 0.3s ease; /* Add transition for a smoother effect */
       }
 
-
       /* Style the Google Translate Element */
       #google_translate_element {
         border: 1px solid rgba(255, 174, 0); /* Cyan border color */
@@ -171,7 +168,6 @@
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(255, 174, 0); /* Initial box-shadow */
       }
-
 
       /* Add box-shadow when hovering over the container */
       #google_translate_element_container:hover {
@@ -217,7 +213,6 @@
           ><i class="fa-solid fa-location-dot"></i> STATE:</label
         >
         <select id="State{{ i }}" name="State{{ i }}">
-          <option value="" disabled selected>Select a State:</option>
           <option value="Andaman and Nicobar">Andaman and Nicobar</option>
           <option value="Andhra Pradesh">Andhra Pradesh</option>
           <option value="Bihar">Bihar</option>
@@ -244,15 +239,13 @@
           <option value="Telangana">Telangana</option>
           <option value="Tripura">Tripura</option>
           <option value="Uttar Pradesh">Uttar Pradesh</option>
-          <option value="Uttrakhand">Uttarakhand</option>
+          <option value="Uttarakhand">Uttarakhand</option>
           <option value="West Bengal">West Bengal</option>
         </select>
         <label for="District{{ i }}"
           ><i class="fas fa-map-marked-alt"></i> DISTRICT :</label
         >
         <select id="District{{ i }}" name="District{{ i }}">
-          <option value="" disabled selected>Select a Market:</option>
-
           <option value="Mangalore(Dakshin Kannad)">
             Mangalore(Dakshin Kannad)
           </option>
@@ -2035,21 +2028,23 @@
           <option value="Zunheboto">Zunheboto</option>
           <option value="kalanwali">kalanwali</option>
         </select>
-        <label for="Commodity{{ i }}"><i class="fas fa-leaf"></i> COMMODITY :</label >
+        <label for="Commodity{{ i }}"
+          ><i class="fas fa-leaf"></i> COMMODITY :</label
+        >
         <select id="Commodity{{ i }}" name="Commodity{{ i }}">
-          <option value="" disabled selected>Select a Commodity:</option>
-
-          <option value="French Beans (Frasbean)">French Beans (Frasbean) </option>
-   <option value="Amaranthus">Amaranthus</option>
+          <option value="French Beans (Frasbean)">
+            French Beans (Frasbean)
+          </option>
+          <option value="Amaranthus">Amaranthus</option>
           <option value="Apple">Apple</option>
           <option value="Ashgourd">Ashgourd</option>
           <option value="Banana">Banana</option>
           <option value="Beetroot">Beetroot</option>
           <option value="Bhindi(Ladies Finger)">Bhindi (Ladies Finger)</option>
-          <option value="Bitter gourd">Bitter Gourd</option>
+          <option value="Bitter Gourd">Bitter Gourd</option>
           <option value="Bottle gourd">Bottle Gourd</option>
           <option value="Brinjal">Brinjal</option>
-          <!-- <option value="broccoli">Broccoli</option> -->
+          <option value="broccoli">Broccoli</option>
           <option value="Cabbage">Cabbage</option>
           <option value="Capsicum">Capsicum</option>
           <option value="Carrot">Carrot</option>
@@ -2058,41 +2053,30 @@
           <option value="Coriander(Leaves)">Coriander (Leaves)</option>
           <option value="Cowpea (Veg)">Cowpea (Veg)</option>
           <option value="Drumstick">Drumstick</option>
-          <option value="fenugreek">Fenugreek</option>
           <option value="Garlic">Garlic</option>
           <option value="Ginger(Green)">Ginger (Green)</option>
           <option value="Green Chilli">Green Chilli</option>
           <option value="Groundnut">Groundnut</option>
           <option value="Guar">Guar</option>
           <option value="Guava">Guava</option>
-          <option value="hibiscus">Hibiscus</option>
-          <option value="honey">Honey</option>
           <option value="Jack Fruit">Jack Fruit</option>
-          <option value="kiwi">Kiwi</option>
           <option value="Lemon">Lemon</option>
-          <option value="little_millet">Little Millet</option>
           <option value="Mango">Mango</option>
           <option value="Mousambi (Sweet Lime)">Mousambi (Sweet Lime)</option>
           <option value="mung_bean">Mung Bean</option>
-          <option value="mushrooms">Mushrooms</option>
           <option value="Onion">Onion</option>
           <option value="Papaya">Papaya</option>
           <option value="Pear (Marasebu)">Pear (Marasebu)</option>
           <option value="Peas Wet">Peas Wet</option>
-          <option value="pigeon_pea">Pigeon Pea</option>
           <option value="Pineapple">Pineapple</option>
           <option value="Plum">Plum</option>
           <option value="Potato">Potato</option>
           <option value="Pumpkin">Pumpkin</option>
           <option value="Raddish">Raddish</option>
           <option value="Rice">Rice</option>
-          <option value="saffron">Saffron</option>
           <!-- <option disabled="" selected="" value="">Select a Commodity</option> -->
           <option value="Soyabean">Soybean</option>
           <option value="Spinach">Spinach</option>
-          <option value="Sponge Gourd">Sponge Gourd</option>
-          <option value="strawberry">Strawberry</option>
-          <option value="sugar_cane">Sugar Cane</option>
           <option value="Tinda">Tinda</option>
           <option value="Tomato">Tomato</option>
           <option value="Turmeric">Turmeric</option>
@@ -2102,7 +2086,6 @@
           ><i class="fas fa-seedling"></i> VARIETY :</label
         >
         <select id="Variety{{ i }}" name="Variety{{ i }}">
-          <option value="" disabled selected>Select a Variety:</option>
           <option value="CR 1009 (Coarse) Boiled">
             CR 1009 (Coarse) Boiled
           </option>
@@ -2246,9 +2229,6 @@
           <option value="Cornation">Cornation</option>
           <option value="Cotton (Unginned)">Cotton (Unginned)</option>
           <option value="Cow">Cow</option>
-          <option value="Cowpea (Veg)">Cowpea (Veg)</option>
-          <option value="Cowpea (W-S)">Cowpea (W-S)</option>
-          <option value="Cowpea (Whole)">Cowpea (Whole)</option>
           <option value="Cqca">Cqca</option>
           <option value="Cucumbar">Cucumbar</option>
           <option value="Cummin Seed(Jeera)">Cummin Seed(Jeera)</option>
@@ -2416,7 +2396,6 @@
           <option value="Mint(Pudina)">Mint(Pudina)</option>
           <option value="Moath Dal">Moath Dal</option>
           <option value="Mogan Medium">Mogan Medium</option>
-          <option value="Mousambi">Mousambi</option>
           <option value="Mustard">Mustard</option>
           <option value="Mustard Oil">Mustard Oil</option>
           <option value="NO 2">NO 2</option>
@@ -2447,9 +2426,8 @@
           <option value="Papaya">Papaya</option>
           <option value="Papaya (Raw)">Papaya (Raw)</option>
           <option value="Pathari">Pathari</option>
-          <option value="Peach">Peach</option>
-          <option value="Pears">Pears</option>
-          <option value="Peas Wet">Peas Wet</option>
+          <option value="Peach">Peach</option>     
+         <option value="Peas Wet">Peas Wet</option>
           <option value="Peas cod">Peas cod</option>
           <option value="Peas(Dry)">Peas(Dry)</option>
           <option value="Pine Apple">Pine Apple</option>
@@ -2579,11 +2557,10 @@
           ><i class="fas fa-balance-scale"></i> QUALITY:</label
         >
         <select id="Grade{{ i }}" name="Grade{{ i }}">
-          <option value="" disabled selected>Select a Quality:</option>
           <option value="FAQ">FAQ :</option>
           <option value="Large">Large</option>
           <option value="Medium">Medium</option>
-          <!-- <option disabled="" selected="" value="">Select a Quality</option> -->
+          <option disabled="" selected="" value="">Select a Quality</option>
         </select>
       </fieldset>
       {% endfor %}
@@ -2617,75 +2594,44 @@
     </div>
     </center>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const cropNames = {{ crop_names | safe }};
-    const cropPrices = {{ crop_prices | safe }};
+    <script>
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const cropNames = {{ crop_names |   safe }};
+                const cropPrices = {{ crop_prices |   safe }};
 
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: cropNames,
-            datasets: [{
-                label: 'Price (Rupees Per Quintal)',
-                data: cropPrices,
-                backgroundColor: [
-                    'rgb(255, 0, 0)',  // normal red
-                    'rgb(255, 204, 0)',  // dark yellow (Mustard Yellow)
-                    'rgb(34, 139, 34)',   // dark green
-                    'rgb(255, 159, 64)',  // orange
-                    'rgb(54, 162, 235)' ,
-                ],
-                borderColor: [
-                    'rgba(255, 0, 0, 0.1)',  // light red
-                    'rgba(255, 204, 0, 0.1)',  // light dark yellow
-                    'rgba(34, 139, 34, 0.1)',   // light green
-                    'rgba(255, 159, 64, 0.1)',  // light orange
-                    'rgba(54, 162, 235, 0.1)'   // light blue
-                ],
-                borderWidth: 2
-            }]
-        },
-        options: {
-            plugins: {
-                legend: {
-                    labels: {
-                        color: 'white', // Set legend label text color to white
-                        font: {
-                            weight: 'bold' // Make legend label text bold
-                        }
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    ticks: {
-                        color: 'white', // Set x-axis text color to white
-                        font: {
-                            weight: 'bold' // Make x-axis text bold
-                        }
-                    },
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.2)' // Set x-axis grid color to white (semi-transparent)
-                    }
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: cropNames,
+                    datasets: [{
+                        label: 'Price (Rupees Per Quintal)',
+                        data: cropPrices,
+                        backgroundColor: [
+          'rgb(255, 0, 0)',  // normal red
+          'rgb(255, 204, 0)',  // dark yellow (Mustard Yellow)
+          'rgb(34, 139, 34)',   // dark green
+          'rgb(255, 159, 64)',  // orange
+          'rgb(54, 162, 235)' ,
+      ],
+      borderColor: [
+          'rgba(255, 0, 0, 0.1)',  // light red
+          'rgba(255, 204, 0, 0.1)',  // light dark yellow
+          'rgba(34, 139, 34, 0.1)',   // light green
+          'rgba(255, 159, 64, 0.1)',  // light orange
+          'rgba(54, 162, 235, 0.1)'   // light blue
+      ],
+      borderWidth: 2
+                    }]
                 },
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        color: 'white', // Set y-axis text color to white
-                        font: {
-                            weight: 'bold' // Make y-axis text bold
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
                         }
-                    },
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.2)' // Set y-axis grid color to white (semi-transparent)
                     }
                 }
-            }
-        }
-    });
-</script>
-
+            });
+    </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--script>
         $(document).ready(function() {
